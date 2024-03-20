@@ -33,4 +33,6 @@
             </div>
         </div>
     </div>
+
+    [partial name="footer"][/partial]
 @endsection
