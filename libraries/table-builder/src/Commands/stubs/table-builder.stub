@@ -1,0 +1,63 @@
+<?php
+namespace DummyNamespace;
+
+use OCMS\TableBuilder\Builder;
+use OCMS\TableBuilder\Column;
+
+class DummyClass extends Builder
+{
+    /**
+     * Model namespace
+     * @var string
+     */    
+    protected $model = ModelNamepsace;
+
+    /**
+     * Set table header title
+     * @var string
+     */
+    protected string $header_title = 'Header title';
+    
+    /**
+     * Show actions
+     * @var bool
+     */    
+    protected bool $show_actions = true;
+
+    public function __construct(array $options = [])
+    {
+        parent::__construct($options);
+
+        // Set create URL 
+        $this->create_url = '/path/to/create';
+
+        // Set delete URL (method => POST)
+        $this->delete_url = '/path/to/delete/url';
+
+        // Set edit URL. See documentation for more details
+        $this->edit_url = '/path/to/edit/:id';
+
+        // Apply custom query
+        $this->applyQuery(function($query, $request) {
+            if($request->filled('search')) {
+                // $query->where('name', 'LIKE', '%'.$request->search.'%');
+            }
+        });        
+    }
+
+    /**
+     * Add columns to table
+     *
+     * @return Column[] 
+     * @throws BindingResolutionException 
+     * @throws NotFoundExceptionInterface 
+     * @throws ContainerExceptionInterface 
+     */
+    protected function columns()
+    {
+        return [
+            new Column("id", __('ID')),
+            new Column("created_at", __('Created at')),
+        ];
+    }  
+}

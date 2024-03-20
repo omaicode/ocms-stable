@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'id' => 'ID',
+    'name' => 'Name',
+    'created_at' => 'Created at',
+    'updated_at' => 'Updated at',
+    'username' => 'Username',
+    'email' => 'Email',
+    'avatar' => 'Avatar',
+    'last_login_at' => 'Last login at',
+    'info' => 'Info',
+    'roles' => 'Role',
+    'email_status' => 'Email Status',
+    'email_verified_at' => 'Email verified at',
+    'profile' => 'Profile',
+    'account_type' => 'Account Type',
+    'boards' => 'Boards',
+    'posts' => 'Posts',
+    'file_upload_status' => 'File Upload Status',
+    'like_status' => 'Like Status',
+    'reply_status' => 'Reply Status',
+    'comment_status' => 'Comment Status',
+    'anonymous_can_post' => 'Anonymous Can Post',
+    'enabled' => 'Enabled',
+    'status' => 'Status',
+    'title' => 'Title',
+    'total_like' => 'Total Like',
+    'total_read' => 'Total Read',
+    'total_comment' => 'Total Comment',
+    'board' => 'Board'
+];

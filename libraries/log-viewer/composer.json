@@ -1,0 +1,46 @@
+{
+    "name": "ocms/log-viewer",
+    "description": "A Laravel log reader",
+    "keywords": [
+        "log",
+        "log-reader",
+        "log-viewer",
+        "logging",
+        "laravel",
+        "lumen"
+    ],
+    "type": "laravel-package",
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com",
+            "homepage": "https://omaicode.com"            
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*|5.*|^6.0|^7.0|^8.0|^9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7|^9.5.10",
+        "orchestra/testbench": "3.7.*|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCMS\\LaravelLogViewer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OCMS\\LaravelLogViewer\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OCMS\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}

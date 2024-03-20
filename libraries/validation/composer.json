@@ -1,0 +1,24 @@
+{
+    "name": "ocms/validation",
+    "description": "Laravel Validation Service",
+    "keywords": ["laravel", "validation", "service"],
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com",
+            "homepage": "https://omaicode.com"            
+        }
+    ],
+    "homepage": "https://omaicode.com",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.4|^6.0|^7.0|^8.0",
+        "illuminate/validation": "~5.4|^6.0|^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCMS\\Validator\\": "src/OCMS/Validator/"
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "ocms/installer",
+    "description": "Installer",
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com",
+            "homepage": "https://omaicode.com"            
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCMS\\LaravelInstaller\\": "src/"
+        },
+        "files": [
+            "src/Helpers/functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OCMS\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+                
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability" : "dev"
+}

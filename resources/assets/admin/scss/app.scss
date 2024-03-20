@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+// update variables here
+@import "custom/variables";
+
+@import "bootstrap/scss/functions";
+@import "volt/variables";
+
+// Third party
+@import 'vanillajs-datepicker/sass/datepicker.scss';
+@import "chartist/dist/scss/chartist.scss";
+@import "tom-select/dist/css/tom-select.bootstrap5.css";
+
+@import "notyf/notyf.min.css";
+@import "sweetalert2/dist/sweetalert2.min.css";
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "simplemde/dist/simplemde.min.css";
+
+// Bootstrap
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+
+// Modify utilities here
+@import "volt/utilities";
+
+// Bootstrap Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// volt mixins & functions
+@import "volt/mixins";
+@import "volt/functions";
+
+// Layout
+@import "volt/layout";
+
+// Components
+@import "volt/components";
+
+// Forms
+@import "volt/forms";
+
+// write your custom styles here!
+.text-lines-2 {
+    overflow: hidden;
+    white-space: pre-wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.text-lines-3 {
+    overflow: hidden;
+    white-space: pre-wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.has-validation {
+    &.is-invalid {
+        .invalid-feedback {
+            display: block
+        }
+    }
+}
+
+.form-group {
+    .thumbnail-preview {
+        margin-top: .5rem;
+        width: 90px;
+        height: 60px;
+        border: 1px dashed var(--bs-gray-600);
+        border-radius: .45rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bs-gray-50);
+    }
+}
+
+.card-avatar {
+    .avatar-wrapper {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.auth-background {
+    background: rgb(247,247,247);
+    background: -moz-radial-gradient(circle, rgba(247,247,247,1) 0%, rgba(227,227,227,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(247,247,247,1) 0%, rgba(227,227,227,1) 100%);
+    background: radial-gradient(circle, rgba(247,247,247,1) 0%, rgba(227,227,227,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#e3e3e3",GradientType=1);
+}
+
+.auth-logo {
+    height: 100px;
+    width: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .auth-logo {
+        height: 60px;
+    }
+}
+
+.form-control:focus, .form-select:focus, .focus .ts-control {
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid var(--bs-border-color);
+}
+
+.ts-dropdown .active {
+    background-color: #e8e8e8;
+}
+
+.ts-control, .ts-wrapper.single.input-active .ts-control {
+    background: var(--bs-white);
+}
+
+.ts-wrapper:not(.form-control,.form-select).single .ts-control {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+}
+
+#popup-review {
+    height: 350px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    background-color: var(--bs-gray-200);
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,6 @@
+env:
+  - DB_CONNECTION="sqlite"
+  - DB_DATABASE=":memory:"
+
+providers:
+  - OCMS\Larinfo\LarinfoServiceProvider

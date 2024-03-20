@@ -1,0 +1,57 @@
+{
+    "name": "ocms/larinfo",
+    "description": "Display system information (IP address, OS, versions) for Laravel.",
+    "type": "library",
+    "keywords":[
+        "laravel",
+        "larinfo",
+        "ipinfo",
+        "linfo",
+        "sysinfo"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-pdo": "*",
+        "davidepastore/ipinfo": "^0.6",
+        "laravel/framework": "5.7.*|5.8.*|^6.0|^7.0|^8.0",
+        "linfo/linfo": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^3.7|^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^7.0|^8.5|^9.5"
+    },
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com",
+            "homepage": "https://omaicode.com"            
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "OCMS\\Larinfo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OCMS\\Larinfo\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OCMS\\Larinfo\\LarinfoServiceProvider"
+            ],
+            "aliases": {
+                "Larinfo": "OCMS\\Larinfo\\LarinfoFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

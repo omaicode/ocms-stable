@@ -1,0 +1,139 @@
+{
+    "name": "omaicode/ocms-stable",
+    "version": "1.0.0",
+    "type": "project",
+    "description": "OCMS - Content Management System",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "laravel",
+        "cms"
+    ],
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com",
+            "homepage": "https://omaicode.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-exif": "*",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "composer-plugin-api": "^2.0",
+        "codezero/laravel-unique-translation": "^4.0",
+        "erusev/parsedown": "^1.7",
+        "fruitcake/laravel-cors": "^3.0",
+        "graham-campbell/markdown": "^14.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/bus": "^8.71",
+        "illuminate/console": "^8.71",
+        "illuminate/database": "^8.71",
+        "illuminate/pipeline": "^8.71",
+        "illuminate/support": "^8.71",
+        "intervention/image": "^2.7",
+        "laravel/framework": "^7.0|^8.0",
+        "laravel/sanctum": "^2.11",
+        "laravel/tinker": "^2.5",
+        "league/flysystem": "^1.0.64",
+        "league/glide": "^1.7",
+        "maennchen/zipstream-php": "^1.0|^2.0",
+        "matriphe/larinfo": "3.0.0",
+        "ocms/google-analytics": "*@dev",
+        "ocms/installer": "*@dev",
+        "ocms/laravel-enum": "*@dev",
+        "ocms/laravel-table-builder": "*@dev",
+        "ocms/larinfo": "*@dev",
+        "ocms/log-viewer": "*@dev",
+        "ocms/permissions-management": "*@dev",
+        "ocms/repository": "*@dev",
+        "ocms/socialite": "*@dev",
+        "spatie/image": "^1.0.0",
+        "spatie/laravel-translatable": "^4.6",
+        "spatie/temporary-directory": "^1.1|^2.0",
+        "symfony/cache": "^5.0",
+        "symfony/console": "^4.4|^5.0",
+        "wikimedia/composer-merge-plugin": "^2.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.12",
+        "facade/ignition": "^2.5",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/sail": "^1.0.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^5.10",
+        "ocms/debugbar": "*@dev",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "files": [
+            "app/functions.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "extra": {},
+        "laravel": {
+            "dont-discover": []
+        },
+        "merge-plugin": {
+            "include": [
+                "./themes/*/composer.json"
+            ],
+            "recurse": false,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": false,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-replace": false,
+            "merge-scripts": false
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "libraries/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}

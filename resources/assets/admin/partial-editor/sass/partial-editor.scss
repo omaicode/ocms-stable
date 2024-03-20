@@ -1,0 +1,164 @@
+.partial-editor-wrapper {
+    position: relative;
+}
+
+.partial-loading {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.partial-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    .partial-list--item {
+        position: relative;
+        font-size: 14px;
+        color: var(--bs-light);
+
+        .partial-list {
+            margin-left: .5rem;
+        }
+
+        .partial-item-content {
+            padding: .25rem .25rem .25rem 2.5rem;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: Font Awesome\ 6 Pro;
+                font-weight: 900;
+                content: "\f1b2";
+                font-size: 1rem;
+                color: var(--bs-success);
+                padding-top: .20rem;
+                padding-left: 1rem
+            }
+
+            &.is-directory {
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-family: Font Awesome\ 6 Pro;
+                    font-weight: 900;
+                    content: "\f106";
+                    font-size: 1rem;
+                    color: var(--bs-gray-300);
+                    padding-top: .20rem;
+                    padding-right: 1rem
+                }
+
+                &::before {
+                    content: "\f07b"
+                }
+
+                &.open {
+                    &::before {
+                        content: "\f07c"
+                    }
+
+                    &::after {
+                        content: "\f107"
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: var(--bs-gray-200);
+            }
+
+            &.active {
+                background: var(--bs-success);
+                color: #fff;
+                &::before {
+                    color: #fff
+                }
+            }
+        }
+    }
+}
+
+.card-partial-content {
+    border-left: 0;
+    border-radius: 0;
+}
+
+.partial-action {
+    cursor: pointer;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: var(--bs-gray-200);
+    line-height: 0;
+    text-align: center;
+    margin-right: .5rem;
+    font-size: 16px;
+
+    &:hover {
+        opacity: .75;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    span {
+        margin-left: .35rem;
+        font-size: 14px;
+    }
+}
+
+.partital-actions {
+    padding: .5rem .75rem;
+    border-bottom: 1px solid var(--bs-gray-200);
+    display: flex;
+    align-items: center;
+}
+
+.partial-content {
+    position: relative;
+    overflow: hidden;
+    height: 497px;
+
+    .CodeMirror {
+        padding: 0;
+        border: 0
+    }
+}
+
+.partial-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    z-index: 1;
+
+    .partial-dialog--content {
+        width: 200px;
+        max-width: 100%;
+        background-color: #fff;
+        border: 1px solid var(--bs-gray-300);
+        padding: .5rem;
+    }
+
+    &.show {
+        display: flex;
+    }
+}

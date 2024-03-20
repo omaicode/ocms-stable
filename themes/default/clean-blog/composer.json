@@ -1,0 +1,19 @@
+{
+    "name": "default/clean-blog",
+    "description": "Clean Blog Jekyll is a stylish, responsive blog theme for Bootstrap created by Start Bootstrap. This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by Formspree.",
+    "type": "laravel-theme",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Bieber Kieu",
+            "email": "thien.kt@omaicode.com"
+        }
+    ],
+    "extra": {
+        "theme": {
+            "parent": "",
+            "active": true
+        }
+    }
+}

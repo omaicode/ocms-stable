@@ -1,0 +1,82 @@
+.media-item-wrapper {
+    &.mode-grid {
+        .media-item-content {
+            position: relative;
+            z-index: 100;
+        }
+
+        .table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            margin-bottom: 0;
+            white-space: nowrap;            
+            font-size: 14px;
+            border-bottom: 1px solid #d4d8da;          
+            
+            tbody {
+                tr.media-item {
+                    cursor: pointer;
+                    border-bottom-width: .0625rem;
+
+                    td {
+                        padding: 10px 15px;
+                        color: #536061;
+                        border-top: 1px solid #ecf0f1;
+                        line-height: 1.42857143;
+                        vertical-align: top;       
+                        border-bottom-width: 0;  
+                        
+                        .item-title {
+                            position: relative;
+                            padding-right: 0;
+                            -webkit-transition: padding 0.1s;
+                            transition: padding 0.1s;
+                            overflow: hidden;
+                            text-overflow: ellipsis;                                                        
+                        }
+
+                        i.fas {
+                            display: inline-block;
+                            margin-right: 7px;
+                            font-size: 15px;
+                            color: #95a5a6;
+                            position: relative;
+                            top: 1px;                            
+                        }
+                    }
+
+                    &:first-child {
+                        tr {
+                            border-top: none;
+                        }
+                    }
+
+                    &:last-child {
+                        td {
+                            border-bottom-width: 0;
+                        }
+                    }
+
+                    &:active, &.selected {
+                        background-color: var(--bs-success);
+                        td {
+                            color: #fff
+                        }
+                    }
+                }
+            }
+
+            .breadcrumb {
+                --bs-breadcrumb-bg: transparent;
+                --bs-breadcrumb-margin-bottom: 0;
+                --bs-breadcrumb-padding-x: 0;
+                --bs-breadcrumb-padding-y: 0;
+
+                .active {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

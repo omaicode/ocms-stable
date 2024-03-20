@@ -1,0 +1,49 @@
+{
+    "name": "ocms/permissions-management",
+    "description": "Permission handling for Laravel 6.0 and up",
+    "license": "MIT",
+    "require": {
+        "php" : "^7.3|^8.0|^8.1",
+        "illuminate/auth": "^7.0|^8.0|^9.0",
+        "illuminate/container": "^7.0|^8.0|^9.0",
+        "illuminate/contracts": "^7.0|^8.0|^9.0",
+        "illuminate/database": "^7.0|^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0|^6.0|^7.0",
+        "phpunit/phpunit": "^9.4",
+        "predis/predis": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCMS\\Permission\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OCMS\\Permission\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OCMS\\Permission\\PermissionServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "5.x-dev",
+            "dev-master": "5.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

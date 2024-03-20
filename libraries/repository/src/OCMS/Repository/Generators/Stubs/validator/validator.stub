@@ -1,0 +1,24 @@
+<?php
+
+$NAMESPACE$
+
+use \OCMS\Validator\Contracts\ValidatorInterface;
+use \OCMS\Validator\LaravelValidator;
+
+/**
+ * Class $CLASS$Validator.
+ *
+ * @package $NAMESPACE$
+ */
+class $CLASS$Validator extends LaravelValidator
+{
+    /**
+     * Validation Rules
+     *
+     * @var array
+     */
+    protected $rules = [
+        ValidatorInterface::RULE_CREATE => $RULES$,
+        ValidatorInterface::RULE_UPDATE => $RULES$,
+    ];
+}

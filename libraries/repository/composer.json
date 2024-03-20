@@ -1,0 +1,51 @@
+{
+  "name": "ocms/repository",
+  "description": "Laravel 5|6|7|8 - Repositories to  the database layer",
+  "keywords": [
+    "laravel",
+    "repository",
+    "eloquent",
+    "model",
+    "cache"
+  ],
+  "authors": [
+    {
+        "name": "Bieber Kieu",
+        "email": "thien.kt@omaicode.com",
+        "homepage": "https://omaicode.com"            
+    }
+  ],
+  "homepage": "https://omaicode.com",
+  "require": {
+    "illuminate/http": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/config": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/support": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/database": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/pagination": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/console": "~5.0|~6.0|~7.0|^8.0",
+    "illuminate/filesystem": "~5.0|~6.0|~7.0|^8.0",
+    "ocms/validation": "*",
+    "illuminate/validation": "~5.0|~6.0|~7.0|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OCMS\\Repository\\": "src/OCMS/Repository/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "suggest": {
+    "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
+    "robclancy/presenter": "Required to use the Presenter Model (1.3.*)",
+    "ocms/validation": "Required to provide easy validation with the repository (1.1.*)"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OCMS\\Repository\\Providers\\RepositoryServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
